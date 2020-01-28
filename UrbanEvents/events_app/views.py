@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from models import Event
+from events_app.models import Event
 
 class EventsView(APIView):
     def get(self, request):
