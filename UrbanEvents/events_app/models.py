@@ -10,7 +10,7 @@ class Event(models.Model):
     creation_date = models.DateTimeField(null=False)
     modify_date = models.DateTimeField(null=True)
     state = models.IntegerField(default=c.TO_VALIDATE, null=False)
-    category = models.IntegerField(null=False)
+    category = models.IntegerField(null=True)
 
     def __str__(self):
         return self.description

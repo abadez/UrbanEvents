@@ -30,10 +30,15 @@ class EventSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Invalid category")
 
     def create(self, data):
+        
+        print("BEFORE: " + str(data))
+        
         data.update({
             'creation_date': datetime.datetime.now(),
             'modify_date': datetime.datetime.now(),
             'state': c.TO_VALIDATE
         })
+
+        print("TESTE: " + str(data))
 
         return Event.objects.create(**data)
