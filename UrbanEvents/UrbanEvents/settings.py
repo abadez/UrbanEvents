@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'UrbanEvents.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'urban_events',
-        'USER': 'my_admin',
-        'PASSWORD': 'my_admin',
-        'HOST': 'localhost',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'postGIS',
         'PORT': '5432'
     }
 }

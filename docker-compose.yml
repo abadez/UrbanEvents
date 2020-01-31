@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postGIS:
+    image: mdillon/postgis:10
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+    - "5432:5432"
+
+  urban_events:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - postGIS
+    ports:
+    - "8000:8000"
