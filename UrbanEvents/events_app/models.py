@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 import events_app.constants as c
 
 class Event(models.Model):
-    description = models.CharField(max_length=100, null=False)
+    description = models.CharField(max_length=150, null=False)
     geo_location = models.PointField(null=False)
     author = models.ForeignKey(User, null=False, on_delete=models.DO_NOTHING)
     creation_date = models.DateTimeField(null=False)

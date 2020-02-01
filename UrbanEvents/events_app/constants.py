@@ -1,7 +1,9 @@
+# Event state
 TO_VALIDATE = 0
 VALIDATED = 1
 RESOLVED = 2
 
+# Event category
 CONSTRUNCTION = 0
 SPECIAL_EVENT = 1
 INCIDENT = 2
