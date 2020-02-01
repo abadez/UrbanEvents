@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "0b00f293-1f7f-4bb6-9df6-1a2e1a844e88",
+		"name": "UrbanEventsPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create event 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d6e3fb91-5687-46ef-bebc-0f7c29decfdf",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(201); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Aveiro Event 1\",\n    \"lat\": 40.6442700,\n    \"lon\": -8.6455400,\n    \"category\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						""
+					]
+				},
+				"description": "user creates an event (Incident) in Aveiro"
+			},
+			"response": []
+		},
+		{
+			"name": "Create event 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b0517b2d-1ffa-4489-be22-a8b2bb37f27f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(201); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Porto event\",\n    \"lat\": 41.1496100,\n    \"lon\": -8.6109900,\n    \"category\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						""
+					]
+				},
+				"description": "user2 creates an event (CONSTRUNCTION) at Porto"
+			},
+			"response": []
+		},
+		{
+			"name": "Create event 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "224dc67a-e715-49a9-b250-ce0d218f280d",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(201); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Coimbra Road\",\n    \"lat\": 40.2056400,\n    \"lon\": -8.4195500,\n    \"category\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						""
+					]
+				},
+				"description": "user creates an event (ROAD_CONDITION) at Coimbra"
+			},
+			"response": []
+		},
+		{
+			"name": "Create event 4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc3025cc-19c1-48f1-af0f-99db66e140ba",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(201); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Lisboa party\",\n    \"lat\": 38.7166700,\n    \"lon\": -9.1333300,\n    \"category\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						""
+					]
+				},
+				"description": "user2 creates an event (SPECIAL_EVENT) at Lisboa"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Events",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d62e7efe-a313-4304-8d2e-c24f7668b0dd",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events"
+					]
+				},
+				"description": "user gets all created events"
+			},
+			"response": []
+		},
+		{
+			"name": "Change event 1 state",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c30eddfd-d864-4218-a98f-11e261067ca9",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"state\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						"1",
+						""
+					]
+				},
+				"description": "admin changes Event 1 (Aveiro) state to VALIDATED"
+			},
+			"response": []
+		},
+		{
+			"name": "Get events from author user2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "58a6a1b3-4442-4551-a0d5-9dab699ecc69",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events?author=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "3"
+						}
+					]
+				},
+				"description": "Get all events created by user2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get INCIDENT events from author user2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f509d0a0-fa4a-4793-82fe-ad6e9cdbca7c",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events?author=3&category=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "3"
+						},
+						{
+							"key": "category",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Get INCIDENT events created by user2"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all events in a 55km radius from Aveiro",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c31ec09e-93ff-4295-b8c4-47c7ee2eef06",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(200); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events?lat=40.6442700&lon=-8.6455400&r=55",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "40.6442700"
+						},
+						{
+							"key": "lon",
+							"value": "-8.6455400"
+						},
+						{
+							"key": "r",
+							"value": "55"
+						}
+					]
+				},
+				"description": "Gets all events created in a 55km radius from Aveiro"
+			},
+			"response": []
+		},
+		{
+			"name": "Normal user trying to update an event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d4bff8f4-4316-4691-a1d4-bce67a3a505f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(403); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"state\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						"2",
+						""
+					]
+				},
+				"description": "A user that is not an admin tries to update an event"
+			},
+			"response": []
+		},
+		{
+			"name": "Try to get an inexistent event",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0e704274-fd14-464f-bdd0-ccc2c4ec3aa9",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.response.to.have.status(404); ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/events_api/events/20/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"events_api",
+						"events",
+						"20",
+						""
+					]
+				},
+				"description": "Try to get an event with inexistent id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
