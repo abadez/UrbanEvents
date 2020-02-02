@@ -4,12 +4,13 @@
 1. Have docker and docker compose installed
 - sudo apt install docker
 - sudo apt install docker-compose
-2. Make sure you don't have any service running on ports 5432 and 8000
+2. Make sure docker is running.
+3. Make sure you don't have any service running on ports 5432 and 8000
 - Note: By default potgresql runs on port 5432, if you have any postgresql instance running on your computer stop it: sudo service postgresql stop
-3. Have Postman installed to use project API
+4. Have Postman installed to use project API
 
 ## Run project (Linux)
-1. Open a terminal in project folder in the same location as the "Dockerfile" file.
+1. Open a terminal in project folder in the same location as the "docker-compose.yml" file.
 2. Run docker-compose and wait until postgresql service is listening for connections ("LOG:  database system is ready to accept connections") and then press Ctrl-C to exit: sudo docker-compose up
 - Note: This is required because our project does not wait for postgresql to be running and fails to start.
 3. Migrate data to postgresql: sudo docker-compose run urban_events python manage.py migrate --noinput
