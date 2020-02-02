@@ -4,9 +4,8 @@
 1. Have docker and docker compose installed
 - sudo apt install docker
 - sudo apt install docker-compose
-2. Make sure you don't have any postgresql service running on your machine
-- Run this command to check if there is any service running: sudo service postgresql status
-- If there the servive is running stop it: sudo service postgresql stop
+2. Make sure you don't have any service running on ports 5432 and 8000
+- Note: By default potgresql runs on port 5432, if you have any postgresql instance running on your computer stop it: sudo service postgresql stop
 3. Have Postman installed to use project API
 
 ## Run project (Linux)
@@ -21,6 +20,11 @@
 
 1. Open Postman GUI and import the postman collection "UrbanEventsPostmanCollection.postman_collection.json".
 2. Run the collection to run the several requests to the project API.
+
+## Default users to use in API
+1. By default the migration command creates one admin user with credentials "admin:admin" and two users with credentials "user:user" and "user2:user2".
+- The admins are allowed to update and delete events
+- The users can create and get event details
 
 ## API
 ### Events
