@@ -11,7 +11,7 @@
 
 ## Run project (Linux)
 1. Open a terminal in project folder in the same location as the "Dockerfile" file.
-2. Run docker-compose and wait until postgresql service is listening for connections and then press Ctrl-C to exit: sudo docker-compose up
+2. Run docker-compose and wait until postgresql service is listening for connections ("LOG:  database system is ready to accept connections") and then press Ctrl-C to exit: sudo docker-compose up
 - Note: This is required because our project does not wait for postgresql to be running and fails to start.
 3. Migrate data to postgresql: sudo docker-compose run urban_events python manage.py migrate --noinput
 4. (Optional) Run django test to check if service is running ok: sudo docker-compose run urban_events python manage.py test
